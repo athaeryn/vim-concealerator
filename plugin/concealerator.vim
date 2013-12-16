@@ -1,11 +1,7 @@
-let s:enabled = 0
-
 function! ConcealToggle()
-    if s:enabled
-        set conceallevel=0
-        let s:enabled = 0
+    if &conceallevel == 0
+        setlocal conceallevel=2
     else
-        set conceallevel=2
-        let s:enabled = 1
+        setlocal conceallevel=0
     endif
 endfunction
